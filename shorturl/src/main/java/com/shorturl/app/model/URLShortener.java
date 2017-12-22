@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 import com.shorturl.app.util.DomainConstants;
@@ -18,7 +19,7 @@ public class URLShortener implements DomainConstants {
     private Long id;
 	     
     @Column(name = "created_on", updatable = false)
-    //@Type(type = COMMON_DATE_TYPE)
+    @Type(type = COMMON_DATE_TYPE)
     private DateTime createdOn = new DateTime();
 	     
     @Column(name = "url_original")
