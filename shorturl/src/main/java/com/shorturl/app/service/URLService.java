@@ -4,6 +4,6 @@ import com.shorturl.app.api.dto.URLShortenerDTO;
 
 public interface URLService {
 
-	URLShortenerDTO saveUrl(String urlOriginal);
+	URLShortenerDTO salvarUrl(String urlOriginal);
 	URLShortenerDTO getURL(String shortenedURL);
 }

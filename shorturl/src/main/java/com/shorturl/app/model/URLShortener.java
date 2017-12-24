@@ -18,11 +18,11 @@ public class URLShortener implements DomainConstants {
     @Column(name = "id")
     private Long id;
 	     
-    @Column(name = "created_on", updatable = false)
+    @Column(name = "data_criacao", updatable = false)
     @Type(type = COMMON_DATE_TYPE)
-    private DateTime createdOn = new DateTime();
-	     
-    @Column(name = "url_original")
+    private DateTime dataCriacao = new DateTime();
+
+	@Column(name = "url_original")
     private String urlOriginal;
 
 	public Long getId() {
@@ -33,20 +33,20 @@ public class URLShortener implements DomainConstants {
 		this.id = id;
 	}
 
-	public DateTime getCreatedOn() {
-		return createdOn;
-	}
-
-	public void setCreatedOn(DateTime createdOn) {
-		this.createdOn = createdOn;
-	}
-
 	public String getUrlOriginal() {
 		return urlOriginal;
 	}
 
 	public void setUrlOriginal(String urlOriginal) {
 		this.urlOriginal = urlOriginal;
+	}
+	
+    public DateTime getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(DateTime dataCriacao) {
+		this.dataCriacao = dataCriacao;
 	}
     
 }

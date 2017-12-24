@@ -14,5 +14,19 @@ public class Base62 {
         return sb.toString();
     }
 	
+	public static long paraBase10(String str) {
+		return paraBase10(new StringBuilder(str).reverse().toString().toCharArray());
+	}
 	
+	private static long paraBase10(char[] chars) {
+		long result = 0;
+		for (int i = chars.length - 1; i >= 0; i--) {
+			result += paraBase10(ALFABETO.indexOf(chars[i]), i);
+		}
+		return result;
+	}
+	
+	private static long paraBase10(long result, int pow) {
+		return result * (int) Math.pow(BASE62, pow);
+	}
 }
