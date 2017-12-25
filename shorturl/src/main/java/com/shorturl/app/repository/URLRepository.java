@@ -13,7 +13,7 @@ public interface URLRepository extends JpaRepository<URLShortener, Long> {
 	@Query(value = "from URLShortener u where u.id = :id")
     Optional<URLShortener> findById(@Param(value = "id") Long id);
      
-    @Query(value = "from URLShortener u where u.originalURL = :urlOriginal")
+    @Query(value = "from URLShortener u where u.url_original = :urlOriginal")
     Optional<URLShortener> findByOriginalURL(@Param(value = "urlOriginal") String urlOriginal);
      
     @Query(nativeQuery = true, value = "SELECT nextval('seq_unique_id')")
