@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.MediaType;
-import org.springframework.http.HttpStatus;
-
 
 import com.shorturl.app.api.URLResource;
 import com.shorturl.app.api.dto.URLShortenerDTO;
 import com.shorturl.app.service.URLService;
+
+import org.springframework.http.MediaType;
+import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("/api/url")
